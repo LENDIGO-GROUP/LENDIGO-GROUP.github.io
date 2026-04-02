@@ -1,116 +1,109 @@
-<!DOCTYPE html><html><head><link rel='stylesheet' href='style.css'><title>Apply</title> 
- https://lendigo-group.github.io/
-@media(max-width:600px){
-  .hero-title { font-size: 26px; }
-  .hero-image-wrapper { width: 180px; height:180px; }
-}
-
-<h1>LENDIGO Financial Solutions</h1>
-<h2>Available Loan Products</h2>
-<h3>Salary Loans</h3>
-<h3>Business Loans</h3>
-
-<script type="application/ld+json">
-{
- "@context": "https://schema.org",
- "@type": "BreadcrumbList",
- "itemListElement": [{
-   "@type": "ListItem",
-   "position": 1,
-   "name": "Home",
-   "item": "https://lendigo-group.github.io/"
- }]
-}
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FinancialService",
-  "name": "LENDIGO",
-  "url": "https://lendigo-group.github.io/",
-  "logo": "https://lendigo-group.github.io/logo.JPG",
-  "description": "LENDIGO offers reliable and fast financial solutions including salary loans, business loans, logbook loans, study loans and LPO financing in Uganda.",
-  "telephone": "+256704679882",
-  "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Kampala, Uganda",
-      "addressLocality": "Kampala",
-      "addressCountry": "UG"
-  },
-  "openingHours": "Mo-Fr 08:00-17:00"
-}
-</script>
-
-<script>
-function showModal(msg){
- document.getElementById('overlay').style.display='block';
- document.getElementById('modal').style.display='block';
- document.getElementById('summary').innerHTML=msg.replace(/%0A/g,'<br>');
-}
-
-function closeModal(){
- document.getElementById('overlay').style.display='none';
- document.getElementById('modal').style.display='none';
- document.getElementById('confirmation').style.display='none';
-}
-
-function submitLoanForm(){
- var n=document.getElementById('name').value;
- var p=document.getElementById('phone').value;
- var e=document.getElementById('email').value;
- var t=document.getElementById('type').value;
- var a=document.getElementById('amount').value;
- var msg='New Loan Application:%0AName: '+n+'%0APhone: '+p+'%0AEmail: '+e+'%0ALoan Type: '+t+'%0AAmount: '+a;
- showModal(msg);
-}
-</script>
-</head><body>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for a Loan | LENDIGO</title>
+    <link rel="stylesheet" href="
+    <meta name="description" content="Apply for fast and reliable loans with LENDIGO. Salary loans, business loans, logbook loans, study loans and LPO financing available in Uganda.">
+    <meta name="keywords" content="Apply loan Uganda, LENDIGO loans, salary loans, business loans, logbook loans">
+    <meta name="author" content="LENDIGO GROUP">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FinancialService",
+      "name": "LENDIGO",
+      "url": "https://lendigo-group.github.io/",
+      "logo": "https://lendigo-group.github.io/logo.JPG",
+      "description": "LENDIGO offers reliable and fast financial solutions including salary loans, business loans, logbook loans, study loans and LPO financing in Uganda.",
+      "telephone": "+256704679882",
+      "openingHours": "Mo-Fr 08:00-17:00"
+    }
+    </script>
+    <script>
+    function showModal(msg) {
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('modal').style.display = 'block';
+        document.getElementById('summary').innerHTML = msg.replace(/%0A/g, '<br>');
+    }
+    function closeModal() {
+        document.getElementById('overlay').style.display = 'none';
+        document.getElementById('modal').style.display = 'none';
+        document.getElementById('confirmation').style.display = 'none';
+    }
+    function submitLoanForm() {
+        var n = document.getElementById('name').value;
+        var p = document.getElementById('phone').value;
+        var e = document.getElementById('email').value;
+        var t = document.getElementById('type').value;
+        var a = document.getElementById('amount').value;
+        var msg =
+            'New Loan Application:%0A' +
+            'Name: ' + n + '%0A' +
+            'Phone: ' + p + '%0A' +
+            'Email: ' + e + '%0A' +
+            'Loan Type: ' + t + '%0A' +
+            'Amount: ' + a;
+        showModal(msg);
+    }
+    </script>
+</head>
+<body>
 <header>
-<img src='logo.JPG' class='logo-circle'>
-<nav>
- <a href='index.html'>Home</a>
- <a href='products.html'>Products</a>
- <a href='apply.html'>Apply</a>
- <a href='about.html'>About</a>
- <a href='team.html'>Team</a>
- <a href='contact.html'>Contact</a>
-</nav>
+    <img src="logo.JPG" class="logo-circle" alt="LENDIGO Logo href="productsucts</a>
+        <a href="apply.html
+        about.htmlAbout</a>
+        <a href="team</a>
+        <a href="contactact</a>
+    </nav>
 </header>
+<main>
+    <h1>Apply for a Loan</h1>
+    <form class="apply-form" onsubmit="event.preventDefault(); submitLoanForm();">
+        <label>Name</label>
+        <input id="name" required>
+        <label>Phone</label>
+        <input id="phone" required>
+        <label>Email</label>
+        <input id="email">
 
-<h1 class='fade-in'>Apply for a Loan</h1>
-<form class='apply-form fade-in' onsubmit='event.preventDefault();submitLoanForm();'>
-<label>Name</label><input id='name' required>
-<label>Phone</label><input id='phone' required>
-<label>Email</label><input id='email'>
-<label>Loan Type</label>
-<select id='type'>
-<option>Salary Loans</option><option>Logbook Loans</option><option>LPO Financing</option><option>Business Loans</option><option>Personal Loans</option><option>Study Loans</option>
-</select>
-<label>Amount</label><input id='amount' type='number' required>
-<button class='btn'>Submit</button>
-</form>
+        <label>Loan Type</label>
+        <select id="type">
+            <option>Salary Loans</option>
+            <option>Logbook Loans</option>
+            <option>LPO Financing</option>
+            <option>Business Loans</option>
+            <option>Personal Loans</option>
+            <option>Study Loans</option>
+        </select>
+        <label>Amount</label>
+        <input id="amount" type="number" required>
+        <button class="btn">Submit</button>
+    </form>
+</main>
+<div id="overlay" class="overlay"></div>
+<div id="modal" class="modal">
+    <h2>Almost Done! Choose How to Send</h2>
+    <p id="summary"></p>
+    <button class="btn whats"
+        onclick="window.open('https://wa.me/256704679882?text=' + encodeURIComponent(document.getElementById('summary').innerText), '_blank');
+                 document.getElementById('confirmation').style.display='block';">
+        WhatsApp
+    </button>
 
-<div id='overlay' class='overlay'></div>
-<div id='modal' class='modal'>
- <h2>Almost Done! Choose How to Send</h2>
- <p id='summary'></p>
+    <button class="btn emailbtn"
+        onclick="window.open('mailto:mn.wewoolefinancialservices@gmail.com?subject=New Loan Application&body=' + encodeURIComponent(document.getElementById('summary').innerText), '_blank');
+                 document.getElementById('confirmation').style.display='block';">
+        Email
+    </button>
 
- <button class='btn whats' onclick="window.open('https://wa.me/256704679882?text='+encodeURIComponent(document.getElementById('summary').innerText),'_blank'); document.getElementById('confirmation').style.display='block';">WhatsApp</button>
-
- <button class='btn emailbtn' onclick="window.open('mailto:mn.wewoolefinancialservices@gmail.com?subject=New Loan Application&body='+encodeURIComponent(document.getElementById('summary').innerText),'_blank'); document.getElementById('confirmation').style.display='block';">Email</button>
-
- <p id='confirmation' style='display:none;color:green;font-weight:700;margin-top:15px;'>Your application has been submitted successfully!</p>
-
- <button class='btn closebtn' onclick='closeModal()'>Close</button>
+    <p id="confirmation" style="display:none;color:green;font-weight:700;margin-top:15px;">
+        Your application has been submitted successfully!
+    </p>
+    <button class="btn closebtn" onclick="closeModal()">Close</button>
 </div>
-
-
-<div class='fab-container'>
- <a class='fab whatsapp' href='https://wa.me/256704679882?text=Hello%20LENDIGO' target='_blank'><img src='https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg'></a>
- <a class='fab call' href='tel:+256704679882'><img src='https://cdn-icons-png.flaticon.com/512/597/597177.png'></a>
- <a class='fab email' href='mailto:mn.wewoolefinancialservices@gmail.com?subject=Loan%20Inquiry'><img src='https://cdn-icons-png.flaticon.com/512/561/561127.png'></a>
-</div>
-
-</body></html>
+<div class="fab-container">
+    <a class="fab whatsapp" href="https://wa.me/256704/whatsapp.png" alt="WhatsAppab call" href="tel:+src="icons/    </a>
+    <a class="fab email" href="mailto:mn.wewoolefinancialservices@gmail.comail.png</div>
+</body>
+</html>
